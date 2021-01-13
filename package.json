@@ -1,0 +1,26 @@
+{
+  "name": "restfull",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MacielSousa/restfull.git"
+  },
+  "author": "macielsousa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MacielSousa/restfull/issues"
+  },
+  "homepage": "https://github.com/MacielSousa/restfull#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "express": "^4.17.1",
+    "nedb": "^1.8.0",
+    "nodemon": "^2.0.7"
+  }
+}
