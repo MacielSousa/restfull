@@ -7,7 +7,7 @@ let app = express();
 app.use(bodydParser.urlencoded({extended: false}));
 app.use(bodydParser.json());
 
-consign().include('routes').into(app);
+consign().include('routes').include('utils').into(app);
 
 //Configuração do Servidor
 app.listen(3000, "127.0.0.1", () => {
