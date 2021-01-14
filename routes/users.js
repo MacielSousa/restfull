@@ -10,14 +10,24 @@ module.exports = (app) => {
     //Rota de listar usuários
     app.get('/users',(req, res)=>{
 
-        res.statusCode = 200;
-        res.setHeader('Content-Type', 'text/html');
-        res.json({
-            users:[{
-                name:'Maciel',
-                email:'maciel@maciel.com',
-                id:1
-            }]
+        
+        db.find({}).sort({name:1}).exec((err, users) => {
+
+            if(err){
+                console.log(`error: ${err}`);
+                res.status(400).json({
+                    error:err
+                });
+            }else{
+                
+                res.statusCode = 200;
+                res.setHeader('Content-Type', 'text/html');
+                res.json({
+                    users
+                });
+
+            }
+    
         });
 
     });
